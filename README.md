@@ -18,7 +18,7 @@ In case you do not want to run this program, you can perform a manual byte data 
 For manual swaps, you are going to need:
 1. [texconv.exe](https://github.com/yk3thn/erswapper/raw/refs/heads/main/texconv.exe)
 2. [png2raw.py](https://github.com/yk3thn/erswapper/raw/refs/heads/main/Tools/png2raw.py)
-3. [png2raw.bat]()
+3. [png2raw.bat](https://github.com/yk3thn/erswapper/raw/refs/heads/main/Tools/png2raw.bat)
 4. [HxD](https://mh-nexus.de/downloads/HxDSetup.zip)
 5. The tutorial at the bottom of this README
 
