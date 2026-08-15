@@ -34,36 +34,9 @@ For manual swaps, you are going to need:
 > you use this program, you are at the mercy of Facepunch, Rust, and Steam. I don't work with any of
 > these companies (though i would like to), nor am I associated with or represent them.
 
-## What I've found
-
-- Editing walls to be transparent is unreliable
-- Keeping backup files inside the Bundle folder does not affect the process
-- Adding junk data in the middle of a bundle seems to not affect the process
-- Adding extra data to the end of a bundle seems to not affect the process
-- Modded servers stream their assets, but im assuming there is a way to force a fallback on the assets on your disk
-- Editing AOs or Masks is unsupported for this program but I don't see why you couldn't do it manually
-- I've swapped at least 25 textures over the last 2 days and havent been banned or suspended (Subject to change)
-- Rust detects UABEA and HxD open
-- Rust does not detect ERSwapper open
-- This program is built such that if Rust changes the format of the assets, it can be rebuilt to support the new system
-- EAC does not check the hash or file size of the bundle files reliably. Sometimes it does, sometimes it doesn't
-- I can't test all the assets available so if you find one that doesnt work please let me know
-
 *Verify Integrity of Game Files* always restores the originals.
 
 <img width="420" height="300" alt="image" src="https://github.com/user-attachments/assets/7b5bfa90-15af-4400-a586-6cefb1f5eb31" />
-
-
-## Limitations
-
-I am only 1 person so I can only launch Rust over and over again so many times, but here are the
-limits i've found:
-
-1. Editing more than 2 bundles at once is unreliable
-2. Editing more than 3 textures in ANY file is unreliable
-3. Editing Icons that are 256x256 are unreliable
-4. Editing meshes, materials, audio, or other data types are unsupported
-5. Editing certain image formats are unsupported (See the "What cannot be swapped?" page in the swapper.)
 
 ## Using it
 
@@ -81,6 +54,32 @@ Rust must be closed while applying, and the app will tell you if it isn't.
 | **What cannot be swapped?** | The textures Rust stores in a form this tool can't rewrite. |
 | **Rebuild Previews** | Re-reads every preview from the game, if one looks wrong. |
 | **Settings** | Rust folder, Config folder, manual update check, clear history. |
+
+## What I've found
+
+- Editing walls to be transparent is unreliable
+- Keeping backup files inside the Bundle folder does not affect the process
+- Adding junk data in the middle of a bundle seems to not affect the process
+- Adding extra data to the end of a bundle seems to not affect the process
+- Modded servers stream their assets, but im assuming there is a way to force a fallback on the assets on your disk
+- Editing AOs or Masks is unsupported for this program but I don't see why you couldn't do it manually
+- I've swapped at least 25 textures over the last 2 days and havent been banned or suspended (Subject to change)
+- Rust detects UABEA and HxD open
+- Rust does not detect ERSwapper open
+- This program is built such that if Rust changes the format of the assets, it can be rebuilt to support the new system
+- EAC does not check the hash or file size of the bundle files reliably. Sometimes it does, sometimes it doesn't
+- I can't test all the assets available so if you find one that doesnt work please let me know
+
+## Limitations
+
+I am only 1 person so I can only launch Rust over and over again so many times, but here are the
+limits i've found:
+
+1. Editing more than 2 bundles at once is unreliable
+2. Editing more than 3 textures in ANY file is unreliable
+3. Editing Icons that are 256x256 are unreliable
+4. Editing meshes, materials, audio, or other data types are unsupported
+5. Editing certain image formats are unsupported (See the "What cannot be swapped?" page in the swapper.)
 
 ## Building from source
 
