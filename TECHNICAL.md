@@ -35,12 +35,22 @@ layout the game shipped with.
 Auto-detected from Steam's registry entry and `libraryfolders.vdf`. Override in **Settings** if the
 guess is wrong — it should be the folder containing `RustClient.exe`.
 
-### 3. Bundle signatures — the one manual step
+### 3. Bundle signatures
 
-**This cannot be derived automatically and must be done once per bundle.**
+Nothing to do here — the signatures ship with the app, in `Config/Signatures/`. This is how the
+`.resS` blob gets located, and it happens two ways.
 
-The app locates a bundle's `.resS` blob by searching the bundle for a *signature*: the first 4 KB of
-a known-clean `.resS`. To produce one:
+**Structurally, first.** A `.bundle` is a `UnityFS` container with a directory listing every file it
+holds and where each one starts. Reading that directory gives the `.resS` start exactly, with no
+searching and no guessing. This works for every bundle the app ships items for.
+
+**By signature, as a fallback.** If the directory can't be read — a compressed layout, or a format
+change in a future Rust update — the app falls back to scanning the bundle for a *signature*: the
+first 4 KB of a known-clean `.resS`. `Config/bundles.json` maps each bundle to its `.sig`.
+
+Either way the answer is the same number, and it is cached in `offset_cache.json` so the work
+happens once. The signature must match at exactly **one** offset; zero or multiple matches abort
+rather than guess.
 
 ## The shipped app (ERSwapper)
 
@@ -65,19 +75,19 @@ offset cache and `texconv.exe` all live in the output folder.
 ## Workflow
 
 1. Select an item.
-2. **Extract Texture** — finds the `.resS` start (cached after the first scan), reads the exact byte
-   range, decodes it to `ERSwapper_<Item>.png` on your Desktop, previews it, and opens it in your
-   default image editor.
+2. **Extract & Open in Editor** — finds the `.resS` start (cached after the first scan), reads the
+   exact byte range, decodes it to `ERSwapper_<Item>.png` on your Desktop, previews it, and opens it
+   in your default image editor.
 3. Edit the PNG in any image editor. Keep the dimensions the same — if you don't, the app offers to
    resize a temporary copy.
-4. **Import Edited Texture** — re-encodes, strips the DDS header, verifies the payload is *exactly*
-   the expected byte count, backs up the bundle, shows a confirmation with every number involved,
-   and writes.
-5. **Restore This Bundle** — copies the bundle's backup back over the live bundle.
-6. **Reset All Swaps** — reverts *every* bundle that has a backup, undoing all swaps at once.
-   Backups are found by scanning both locations, so a swap stays revertible even if you later
-   edited or deleted its preset. Backups are kept afterwards, so it can be run again any time. If one
-   bundle fails (locked, missing), the rest still restore and the failures are listed.
+4. **Apply Edited Texture** — re-encodes, strips the DDS header, verifies the payload is *exactly*
+   the expected byte count, stores the original bytes for undo, shows a confirmation with every
+   number involved, and writes.
+5. **Swap History** — undo any single swap. It rewrites only that texture's bytes, so other swaps in
+   the same bundle are left alone.
+6. **Reset All Swaps** — undoes every swap that is still applied, in one go. The history is kept
+   afterwards, so it can be run again any time. If one fails (locked, missing), the rest still
+   restore and the failures are listed.
 
 Rust must be fully closed for steps 4–6. The app checks for the running process and re-checks
 immediately before the write, in case the game was launched while the confirmation dialog was open.
@@ -143,9 +153,10 @@ would overwrite a neighbouring texture:
 - The write range must lie fully inside the bundle.
 - The DDS produced by texconv must actually be the format the preset declared.
 - The signature must match at exactly **one** offset — zero or multiple matches abort the operation.
-- The bundle is backed up before its first write, and an existing backup is never overwritten.
-- Backups are written to a `.partial` file and moved into place, so an interrupted copy can't leave
-  a truncated file that looks like a valid backup.
+- The original bytes are read and stored **before** the write, so every swap is undoable the moment
+  it happens.
+- Rust must be closed. The check runs again immediately before the write, in case the game was
+  launched while the confirmation dialog was open.
 
 ### Undo is per swap, not per bundle
 
