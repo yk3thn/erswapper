@@ -27,9 +27,6 @@ zip or downloads itself on first run. There is nothing to configure before you s
 > you use this program, you are at the mercy of Facepunch, Rust, and Steam. I don't work with any of
 > these companies (though i would like to), nor am I associated with or represent them.
 
-**Offline / single-player use only.** Do not join servers with anti-cheat enabled while your game
-files are modified. Rust's asset integrity checks (EAC) are designed to detect this and it may result
-in a ban. Every swap can be undone from **Swap History**, and Steam →
 *Verify Integrity of Game Files* always restores the originals.
 
 ## Limitations
@@ -45,7 +42,7 @@ limits i've found:
 
 ## Using it
 
-1. Pick an item from the gallery.
+1. Pick an item from the gallery and click on it.
 2. **Extract & Open in Editor** — the current texture opens as a PNG in your image editor.
 3. Edit it, keeping the same dimensions, and save.
 4. **Apply Edited Texture** — it is converted back and written into the bundle.
