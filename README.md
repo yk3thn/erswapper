@@ -47,7 +47,8 @@ For manual swaps, you are going to need:
 > I can't test all the assets available so if you find one that doesnt work please let me know
 
 *Verify Integrity of Game Files* always restores the originals.
-<img width="421" height="300" alt="image" src="https://github.com/user-attachments/assets/7b5bfa90-15af-4400-a586-6cefb1f5eb31" />
+
+<img width="210" height="150" alt="image" src="https://github.com/user-attachments/assets/7b5bfa90-15af-4400-a586-6cefb1f5eb31" />
 
 
 ## Limitations
