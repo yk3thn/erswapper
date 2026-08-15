@@ -14,6 +14,7 @@ Open source, ERSwapper uses the Unity Asset Bundle System to locate, preview, ed
 
 ### Manual Swaps
 
+In case you do not want to run this program, you can perform a manual byte data overwrite.
 For manual swaps, you are going to need:
 1. [textconv.exe](https://github.com/yk3thn/erswapper/raw/refs/heads/main/texconv.exe)
 2. [png2raw.py](https://github.com/yk3thn/erswapper/raw/refs/heads/main/Tools/png2raw.py)
