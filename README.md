@@ -1,6 +1,6 @@
 # ERSwapper
 ERSwapper is an easy way to edit the byte data of texture assets in the video game Rust.
-Open source, ERSwapper uses the Unity Asset Bundle System to locate, preview, edit, and reimport texture data (color, bump, effect) for in-game dependencies.
+Open source, ERSwapper uses the Unity Asset Bundle System to locate, preview, edit, and reimport texture data for in-game dependencies.
 ![ERSwapper](https://github.com/yk3thn/erswapper/blob/main/ERSwapper_banner.png "ERSwapper Banner")
 
 ## Prerequisites
@@ -11,7 +11,7 @@ Open source, ERSwapper uses the Unity Asset Bundle System to locate, preview, ed
 5. ERSwapper
 
 ## Safety
-```As a video game player and computer user, I've personally been a victim to viruses. I don't expect you to blindly trust me. That is why this entire project is open source, and I have no intention of hiding any of my findings. I not only allow but ENCOURAGE you to look through the source code and possibly compile it yourself. Add a feature or two and send me a message. This entire project comes from a genuine passion for game modding, not cheating. This program does not require administrator privileges, but does tamper with files, create files, and delete files. The scope of the affect is limited to only what is necessary (or in some cases, efficient) to completing the task at hand. If you use this program, you are at the mercy of Facepunch, Rust, and Steam. I don't work with any of these companies (though i would like to), nor am I associated with or represent them.```
+```As a video game player and computer user, I've personally been a victim to viruses. I don't expect you to blindly trust me. That is why this entire project is open source, and I have no intention of hiding any of my findings. I not only allow but ENCOURAGE you to look through the source code and possibly compile it yourself. Add a feature or two and send me a message. This entire project comes from a passion for game modding, not cheating. This program does not require administrator privileges, but does tamper with files, create files, and delete files. The scope of the affect is limited to only what is necessary (or in some cases, efficient) to completing the task at hand. If you use this program, you are at the mercy of Facepunch, Rust, and Steam. I don't work with any of these companies (though i would like to), nor am I associated with or represent them.```
 
 ## Limitations
 I am only 1 person so I can only launch Rust over and over again so many times, but here are the limits i've found:
