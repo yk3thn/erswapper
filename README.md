@@ -12,8 +12,32 @@ Open source, ERSwapper uses the Unity Asset Bundle System to locate, preview, ed
 3. [DotNET 8.0 Desktop Runtime](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-desktop-8.0.30-windows-x64-installer)
 4. ERSwapper — [download the latest release](https://github.com/yk3thn/erswapper/releases/latest)
 
-That's it. Rust is found automatically, and `texconv.exe` (the texture converter) either ships in the
-zip or downloads itself on first run. There is nothing to configure before you start.
+### Manual Swaps
+
+For manual swaps, you are going to need:
+1. [textconv.exe](https://github.com/yk3thn/erswapper/raw/refs/heads/main/texconv.exe)
+2. [png2raw.py](https://github.com/yk3thn/erswapper/raw/refs/heads/main/Tools/png2raw.py)
+3. [png2raw.bat]()
+4. [HxD](https://mh-nexus.de/downloads/HxDSetup.zip)
+
+#### How To Perform a Manual Swap:
+
+1. Put all 3 files in the same folder as your edited texture
+2. get [UABEA](https://github.com/nesrak1/UABEA)
+4. drag and drop a bundle into UABE and then click on the drop down and select the resS
+5. click "Export" and then click the drop down and reselect the regular CAB then click "Info"
+6. click on the asset you want to edit and then click "Export Dump" and Plugins/Export Texture
+7. Close UABEA and edit the png you exported
+8. Replace the expect number inside png2raw.bat with the size of the asset located in the dump you exported
+9. rename the png file to "texture.png" and then open up png2raw.py
+10. if it says "Matches target texture. Safe to overwrite in palce." then you can proceed
+11. take the size of the bundle (ex. 7027660544) and subtract the size of the resS (ex. 7025472480) to get the resS offset (ex. 2188064)
+12. add the resS offset to the asset offset found in the dump (ex. 4341665408) to get your asset offset (ex. 4343853472)
+13. do CTRL+E to search for the asset offset using the "dec" selection and then for the "Length" put the size of the asset found in the dump
+14. everything selected is the byte data of the asset
+15. use CTRL+C to copy the data from the texture.bin that was created from texture.png
+16. use CTRL+B (NOT CTRL+V) to overwrite the selected data in the bundle
+17. save the bundle with CTRL+S and then launch Rust
 
 ## Safety
 
@@ -26,6 +50,18 @@ zip or downloads itself on first run. There is nothing to configure before you s
 > limited to only what is necessary (or in some cases, efficient) to completing the task at hand. If
 > you use this program, you are at the mercy of Facepunch, Rust, and Steam. I don't work with any of
 > these companies (though i would like to), nor am I associated with or represent them.
+> Editing walls to be transparent is unreliable
+> Keeping backup files inside the Bundle folder does not affect the process
+> Adding junk data in the middle of a bundle seems to not affect the process
+> Adding extra data to the end of a bundle seems to not affect the process
+> Modded servers stream their assets, but im assuming there is a way to force a fallback on the assets on your disk
+> Editing AOs or Masks is unsupported for this program but I don't see why you couldn't do it manually
+> I've swapped at least 25 textures over the last 2 days and havent been banned or suspended (Subject to change)
+> Rust detects UABEA and HxD open
+> Rust does not detect ERSwapper open
+> This program is built such that if Rust changes the format of the assets, it can be rebuilt to support the new system
+> EAC does not check the hash or file size of the bundle files reliably. Sometimes it does, sometimes it doesn't
+> I can't test all the assets available so if you find one that doesnt work please let me know
 
 *Verify Integrity of Game Files* always restores the originals.
 
@@ -74,8 +110,7 @@ The catalogue of swappable items is curated with a separate authoring tool that 
 You don't need it to build, run or modify ERSwapper — `Config/presets.json` is plain JSON you can
 extend by hand.
 
-**[TECHNICAL.md](TECHNICAL.md)** covers how it actually works: how a texture is located inside a
-bundle, the offset maths, the safety rules the code enforces, and where files live at runtime.
+view **[TECHNICAL.md](TECHNICAL.md)** for more information.
 
 ## License
 
