@@ -12,3 +12,4 @@ ERSwapper.Tests/
 ERSwapper.Dev.sln
 *.sln.bak-*
 catalogue-backups/
+Tools/package-release.ps1

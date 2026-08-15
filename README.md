@@ -16,7 +16,7 @@ Open source, ERSwapper uses the Unity Asset Bundle System to locate, preview, ed
 
 In case you do not want to run this program, you can perform a manual byte data overwrite.
 For manual swaps, you are going to need:
-1. [textconv.exe](https://github.com/yk3thn/erswapper/raw/refs/heads/main/texconv.exe)
+1. [texconv.exe](https://github.com/yk3thn/erswapper/raw/refs/heads/main/texconv.exe)
 2. [png2raw.py](https://github.com/yk3thn/erswapper/raw/refs/heads/main/Tools/png2raw.py)
 3. [png2raw.bat]()
 4. [HxD](https://mh-nexus.de/downloads/HxDSetup.zip)
@@ -33,18 +33,21 @@ For manual swaps, you are going to need:
 > limited to only what is necessary (or in some cases, efficient) to completing the task at hand. If
 > you use this program, you are at the mercy of Facepunch, Rust, and Steam. I don't work with any of
 > these companies (though i would like to), nor am I associated with or represent them.
-> Editing walls to be transparent is unreliable
-> Keeping backup files inside the Bundle folder does not affect the process
-> Adding junk data in the middle of a bundle seems to not affect the process
-> Adding extra data to the end of a bundle seems to not affect the process
-> Modded servers stream their assets, but im assuming there is a way to force a fallback on the assets on your disk
-> Editing AOs or Masks is unsupported for this program but I don't see why you couldn't do it manually
-> I've swapped at least 25 textures over the last 2 days and havent been banned or suspended (Subject to change)
-> Rust detects UABEA and HxD open
-> Rust does not detect ERSwapper open
-> This program is built such that if Rust changes the format of the assets, it can be rebuilt to support the new system
-> EAC does not check the hash or file size of the bundle files reliably. Sometimes it does, sometimes it doesn't
-> I can't test all the assets available so if you find one that doesnt work please let me know
+
+## What I've found
+
+- Editing walls to be transparent is unreliable
+- Keeping backup files inside the Bundle folder does not affect the process
+- Adding junk data in the middle of a bundle seems to not affect the process
+- Adding extra data to the end of a bundle seems to not affect the process
+- Modded servers stream their assets, but im assuming there is a way to force a fallback on the assets on your disk
+- Editing AOs or Masks is unsupported for this program but I don't see why you couldn't do it manually
+- I've swapped at least 25 textures over the last 2 days and havent been banned or suspended (Subject to change)
+- Rust detects UABEA and HxD open
+- Rust does not detect ERSwapper open
+- This program is built such that if Rust changes the format of the assets, it can be rebuilt to support the new system
+- EAC does not check the hash or file size of the bundle files reliably. Sometimes it does, sometimes it doesn't
+- I can't test all the assets available so if you find one that doesnt work please let me know
 
 *Verify Integrity of Game Files* always restores the originals.
 
@@ -108,7 +111,7 @@ view **[TECHNICAL.md](TECHNICAL.md)** for more information.
 7. Close UABEA and edit the png you exported
 8. Replace the expect number inside png2raw.bat with the size of the asset located in the dump you exported
 9. rename the png file to "texture.png" and then open up png2raw.py
-10. if it says "Matches target texture. Safe to overwrite in palce." then you can proceed
+10. if it says "Matches the target texture. Safe to overwrite in place." then you can proceed
 11. take the size of the bundle (ex. 7027660544) and subtract the size of the resS (ex. 7025472480) to get the resS offset (ex. 2188064)
 12. add the resS offset to the asset offset found in the dump (ex. 4341665408) to get your asset offset (ex. 4343853472)
 13. do CTRL+E to search for the asset offset using the "dec" selection and then for the "Length" put the size of the asset found in the dump
