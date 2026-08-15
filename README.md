@@ -55,6 +55,8 @@ Rust must be closed while applying, and the app will tell you if it isn't.
 | **Rebuild Previews** | Re-reads every preview from the game, if one looks wrong. |
 | **Settings** | Rust folder, Config folder, manual update check, clear history. |
 
+view **[TECHNICAL.md/Adding Items](https://github.com/yk3thn/erswapper/blob/main/TECHNICAL.md#adding-items)** to learn how to add select supported items manually.
+
 ## What I've found
 
 - Editing walls to be transparent is unreliable
