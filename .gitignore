@@ -1,0 +1,14 @@
+bin/
+obj/
+artifacts/
+.vs/
+*.user
+*.suo
+*.cache
+TestResults/
+
+ERSDev/
+ERSwapper.Tests/
+ERSwapper.Dev.sln
+*.sln.bak-*
+catalogue-backups/

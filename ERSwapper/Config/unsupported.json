@@ -1,0 +1,182 @@
+[
+  {
+    "DumpFile": "BlackJackTable_bc-CAB-92bf9b10df3c708440c2a5e5ee940f12--2120687742748869102.json",
+    "TextureName": "BlackJackTable_bc",
+    "Status": "unsupported",
+    "Reason": "unsupported m_TextureFormat 25 (only DXT1/DXT3/DXT5 can be written)",
+    "TextureFormat": 25,
+    "Width": 2048,
+    "Height": 2048,
+    "RecordedUtc": "2026-08-14T04:47:14.6009228Z"
+  },
+  {
+    "DumpFile": "bootstrap_bg_01-CAB-2ad51f17dcae275ff50f4fededcbbf0b--2580108454737974589.json",
+    "TextureName": "bootstrap_bg_01",
+    "Status": "unsupported",
+    "Reason": "unsupported m_TextureFormat 25 (only DXT1/DXT3/DXT5 can be written)",
+    "TextureFormat": 25,
+    "Width": 1920,
+    "Height": 1080,
+    "RecordedUtc": "2026-08-12T10:15:26.9823358Z"
+  },
+  {
+    "DumpFile": "BurlapHandWraps_bc-CAB-9e62d1b8ecd60ab6d50aac814268e019-4870247077398275828.json",
+    "TextureName": "BurlapHandWraps_bc",
+    "Status": "unsupported",
+    "Reason": "unsupported m_TextureFormat 25 (only DXT1/DXT3/DXT5 can be written)",
+    "TextureFormat": 25,
+    "Width": 2048,
+    "Height": 2048,
+    "RecordedUtc": "2026-08-12T05:35:47.1764973Z"
+  },
+  {
+    "DumpFile": "hide_pantsandshirt_bc-CAB-9e62d1b8ecd60ab6d50aac814268e019-733062735734477660.json",
+    "TextureName": "hide_pantsandshirt_bc",
+    "Status": "unsupported",
+    "Reason": "unsupported m_TextureFormat 25 (only DXT1/DXT3/DXT5 can be written)",
+    "TextureFormat": 25,
+    "Width": 1024,
+    "Height": 1024,
+    "RecordedUtc": "2026-08-12T05:42:45.9344430Z"
+  },
+  {
+    "DumpFile": "holosight.reticle.standard-CAB-9e62d1b8ecd60ab6d50aac814268e019--3843184274615412458.json",
+    "TextureName": "holosight.reticle.standard",
+    "Status": "unsupported",
+    "Reason": "unsupported m_TextureFormat 4 (only DXT1/DXT3/DXT5 can be written)",
+    "TextureFormat": 4,
+    "Width": 512,
+    "Height": 512,
+    "RecordedUtc": "2026-08-12T05:43:18.9167421Z"
+  },
+  {
+    "DumpFile": "holosight.reticle.standard_large-CAB-9e62d1b8ecd60ab6d50aac814268e019-9063345328541264728.json",
+    "TextureName": "holosight.reticle.standard_large",
+    "Status": "unsupported",
+    "Reason": "unsupported m_TextureFormat 25 (only DXT1/DXT3/DXT5 can be written)",
+    "TextureFormat": 25,
+    "Width": 512,
+    "Height": 512,
+    "RecordedUtc": "2026-08-12T05:43:22.0499743Z"
+  },
+  {
+    "DumpFile": "hqmetalOre_sg-CAB-9e62d1b8ecd60ab6d50aac814268e019-230827542505207170.json",
+    "TextureName": "hqmetalOre_sg",
+    "Status": "unsupported",
+    "Reason": "unsupported m_TextureFormat 25 (only DXT1/DXT3/DXT5 can be written)",
+    "TextureFormat": 25,
+    "Width": 512,
+    "Height": 512,
+    "RecordedUtc": "2026-08-12T05:43:49.7163730Z"
+  },
+  {
+    "DumpFile": "IndustrialPipes_mg-CAB-9e62d1b8ecd60ab6d50aac814268e019-4844165029070188796.json",
+    "TextureName": "IndustrialPipes_mg",
+    "Status": "unsupported",
+    "Reason": "unsupported m_TextureFormat 25 (only DXT1/DXT3/DXT5 can be written)",
+    "TextureFormat": 25,
+    "Width": 1024,
+    "Height": 1024,
+    "RecordedUtc": "2026-08-12T05:44:17.2375545Z"
+  },
+  {
+    "DumpFile": "ScrapHeliPRT2_bc-CAB-92bf9b10df3c708440c2a5e5ee940f12--4167629102855430655.json",
+    "TextureName": "ScrapHeliPRT2_bc",
+    "Status": "unsupported",
+    "Reason": "unsupported m_TextureFormat 25 (only DXT1/DXT3/DXT5 can be written)",
+    "TextureFormat": 25,
+    "Width": 2048,
+    "Height": 2048,
+    "RecordedUtc": "2026-08-12T08:53:02.9153606Z"
+  },
+  {
+    "DumpFile": "Trim_bc-CAB-9e62d1b8ecd60ab6d50aac814268e019--873270895378855444.json",
+    "TextureName": "Trim_bc",
+    "Status": "unsupported",
+    "Reason": "unsupported m_TextureFormat 25 (only DXT1/DXT3/DXT5 can be written)",
+    "TextureFormat": 25,
+    "Width": 2048,
+    "Height": 2048,
+    "RecordedUtc": "2026-08-12T05:57:04.8049970Z"
+  },
+  {
+    "DumpFile": "UI.Spashscreen-CAB-2ad51f17dcae275ff50f4fededcbbf0b-97341007885530957.json",
+    "TextureName": "UI.Spashscreen",
+    "Status": "unsupported",
+    "Reason": "unsupported m_TextureFormat 3 (only DXT1/DXT3/DXT5 can be written)",
+    "TextureFormat": 3,
+    "Width": 432,
+    "Height": 163,
+    "RecordedUtc": "2026-08-12T10:13:13.3253851Z"
+  },
+  {
+    "DumpFile": "ViewmodelArms-CAB-154587b10caab4209fca197fec8809e6-1730823512864774856.json",
+    "TextureName": "ViewmodelArms",
+    "Status": "unsupported",
+    "Reason": "unsupported m_TextureFormat 25 (only DXT1/DXT3/DXT5 can be written)",
+    "TextureFormat": 25,
+    "Width": 1024,
+    "Height": 1024,
+    "RecordedUtc": "2026-08-12T05:28:20.3509758Z"
+  },
+  {
+    "DumpFile": "v_torch_bc-CAB-154587b10caab4209fca197fec8809e6-2009805870936827793.json",
+    "TextureName": "v_torch_bc",
+    "Status": "unsupported",
+    "Reason": "unsupported m_TextureFormat 25 (only DXT1/DXT3/DXT5 can be written)",
+    "TextureFormat": 25,
+    "Width": 1024,
+    "Height": 1024,
+    "RecordedUtc": "2026-08-12T05:28:02.1297554Z"
+  },
+  {
+    "DumpFile": "wolfheaddress_color-CAB-2ad51f17dcae275ff50f4fededcbbf0b-6770213094563853619.json",
+    "TextureName": "wolfheaddress_color",
+    "Status": "unsupported",
+    "Reason": "unsupported m_TextureFormat 25 (only DXT1/DXT3/DXT5 can be written)",
+    "TextureFormat": 25,
+    "Width": 512,
+    "Height": 512,
+    "RecordedUtc": "2026-08-12T09:37:34.6133856Z"
+  },
+  {
+    "DumpFile": "WoodArmorJacket_bc-CAB-9e62d1b8ecd60ab6d50aac814268e019-3041017642996317575.json",
+    "TextureName": "WoodArmorJacket_bc",
+    "Status": "unsupported",
+    "Reason": "unsupported m_TextureFormat 25 (only DXT1/DXT3/DXT5 can be written)",
+    "TextureFormat": 25,
+    "Width": 1024,
+    "Height": 1024,
+    "RecordedUtc": "2026-08-12T05:59:42.3352738Z"
+  },
+  {
+    "DumpFile": "WoodArmorPants_bc-CAB-9e62d1b8ecd60ab6d50aac814268e019-897610748818805460.json",
+    "TextureName": "WoodArmorPants_bc",
+    "Status": "unsupported",
+    "Reason": "unsupported m_TextureFormat 25 (only DXT1/DXT3/DXT5 can be written)",
+    "TextureFormat": 25,
+    "Width": 1024,
+    "Height": 1024,
+    "RecordedUtc": "2026-08-12T05:59:40.0184867Z"
+  },
+  {
+    "DumpFile": "wood_wall_lod3_bc-CAB-9e62d1b8ecd60ab6d50aac814268e019-5582516962408724167.json",
+    "TextureName": "wood_wall_lod3_bc",
+    "Status": "unsupported",
+    "Reason": "unsupported m_TextureFormat 25 (only DXT1/DXT3/DXT5 can be written)",
+    "TextureFormat": 25,
+    "Width": 512,
+    "Height": 512,
+    "RecordedUtc": "2026-08-12T05:59:36.1552271Z"
+  },
+  {
+    "DumpFile": "xhair-CAB-9e62d1b8ecd60ab6d50aac814268e019--1312812184821340159.json",
+    "TextureName": "xhair",
+    "Status": "unsupported",
+    "Reason": "unsupported m_TextureFormat 25 (only DXT1/DXT3/DXT5 can be written)",
+    "TextureFormat": 25,
+    "Width": 256,
+    "Height": 256,
+    "RecordedUtc": "2026-08-12T06:00:18.2670993Z"
+  }
+]

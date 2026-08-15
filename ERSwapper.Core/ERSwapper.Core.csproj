@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>ERSwapper.Core</RootNamespace>
+    <AssemblyName>ERSwapper.Core</AssemblyName>
+
+    <!-- Shared by both WinForms apps: the theme and CardPanel live here too, and the
+         thumbnail cache needs System.Drawing. -->
+    <UseWindowsForms>true</UseWindowsForms>
+  </PropertyGroup>
+
+</Project>

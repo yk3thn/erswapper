@@ -1,0 +1,116 @@
+[
+  {
+    "Bundle": "shared\\content.bundle",
+    "Cab": "CAB-e2446ae3835fd7310524e3e713bd9b72",
+    "Signature": "CAB-e2446ae3835fd7310524e3e713bd9b72.resS.sig",
+    "Label": "shared / content"
+  },
+  {
+    "Bundle": "shared\\items.preload.bundle",
+    "Cab": "CAB-169c39cbd9bfcafc44fb296ad8cc02ec",
+    "Signature": "CAB-169c39cbd9bfcafc44fb296ad8cc02ec.resS.sig",
+    "Label": "shared / items.preload"
+  },
+  {
+    "Bundle": "shared\\monuments.bundle",
+    "Cab": "CAB-9ae27fe45fa6f76b38e743d35b740249",
+    "Signature": "CAB-9ae27fe45fa6f76b38e743d35b740249.resS.sig",
+    "Label": "shared / monuments"
+  },
+  {
+    "Bundle": "shared\\skinnables.preload.bundle",
+    "Cab": "CAB-c1bd25a568e1b476212e082300d21a99",
+    "Signature": "CAB-c1bd25a568e1b476212e082300d21a99.resS.sig",
+    "Label": "shared / skinnables.preload"
+  },
+  {
+    "Bundle": "shared\\textures.0.bundle",
+    "Cab": "CAB-92bf9b10df3c708440c2a5e5ee940f12",
+    "Signature": "CAB-92bf9b10df3c708440c2a5e5ee940f12.resS.sig",
+    "Label": "shared / textures.0"
+  },
+  {
+    "Bundle": "shared\\textures.1.bundle",
+    "Cab": "CAB-154587b10caab4209fca197fec8809e6",
+    "Signature": "CAB-154587b10caab4209fca197fec8809e6.resS.sig",
+    "Label": "shared / textures.1"
+  },
+  {
+    "Bundle": "shared\\textures.2.bundle",
+    "Cab": "CAB-9e62d1b8ecd60ab6d50aac814268e019",
+    "Signature": "CAB-9e62d1b8ecd60ab6d50aac814268e019.resS.sig",
+    "Label": "shared / textures.2"
+  },
+  {
+    "Bundle": "shared\\textures.3.bundle",
+    "Cab": "CAB-57a70a7a92d0f33eee58e02309b8a235",
+    "Signature": "CAB-57a70a7a92d0f33eee58e02309b8a235.resS.sig",
+    "Label": "shared / textures.3"
+  },
+  {
+    "Bundle": "shared\\textures.4.bundle",
+    "Cab": "CAB-2ad51f17dcae275ff50f4fededcbbf0b",
+    "Signature": "CAB-2ad51f17dcae275ff50f4fededcbbf0b.resS.sig",
+    "Label": "shared / textures.4"
+  },
+  {
+    "Bundle": "textures\\textures.0.bundle",
+    "Cab": "CAB-dc19ac421f194011c670564d08ac2892",
+    "Signature": "CAB-dc19ac421f194011c670564d08ac2892.resS.sig",
+    "Label": "textures / textures.0"
+  },
+  {
+    "Bundle": "textures\\textures.1.bundle",
+    "Cab": "CAB-c0c972f2d19be5a65d98891261e319df",
+    "Signature": "CAB-c0c972f2d19be5a65d98891261e319df.resS.sig",
+    "Label": "textures / textures.1"
+  },
+  {
+    "Bundle": "textures\\textures.2.bundle",
+    "Cab": "CAB-f278823df56d42941e69f4b2b4f23e12",
+    "Signature": "CAB-f278823df56d42941e69f4b2b4f23e12.resS.sig",
+    "Label": "textures / textures.2"
+  },
+  {
+    "Bundle": "textures\\textures.3.bundle",
+    "Cab": "CAB-848afa85e0af883914661f3ea369fae4",
+    "Signature": "CAB-848afa85e0af883914661f3ea369fae4.resS.sig",
+    "Label": "textures / textures.3"
+  },
+  {
+    "Bundle": "textures\\textures.4.bundle",
+    "Cab": "CAB-8b97cdf00c7329606e6f977e44f00ae2",
+    "Signature": "CAB-8b97cdf00c7329606e6f977e44f00ae2.resS.sig",
+    "Label": "textures / textures.4"
+  },
+  {
+    "Bundle": "textures\\textures.5.bundle",
+    "Cab": "CAB-a34bad4d95e815a2746e5ec9369fb56a",
+    "Signature": "CAB-a34bad4d95e815a2746e5ec9369fb56a.resS.sig",
+    "Label": "textures / textures.5"
+  },
+  {
+    "Bundle": "textures\\textures.6.bundle",
+    "Cab": "CAB-105cea66e95d6eca5268fe69828463a2",
+    "Signature": "CAB-105cea66e95d6eca5268fe69828463a2.resS.sig",
+    "Label": "textures / textures.6"
+  },
+  {
+    "Bundle": "textures\\textures.7.bundle",
+    "Cab": "CAB-816a42f8feb128a693a8de5f11d93dd7",
+    "Signature": "CAB-816a42f8feb128a693a8de5f11d93dd7.resS.sig",
+    "Label": "textures / textures.7"
+  },
+  {
+    "Bundle": "textures\\textures.8.bundle",
+    "Cab": "CAB-b681a6a06f8bc38409c53b063e06d06b",
+    "Signature": "CAB-b681a6a06f8bc38409c53b063e06d06b.resS.sig",
+    "Label": "textures / textures.8"
+  },
+  {
+    "Bundle": "textures\\textures.9.bundle",
+    "Cab": "CAB-f7426ccb61419c7d09e27383bb3f16c6",
+    "Signature": "CAB-f7426ccb61419c7d09e27383bb3f16c6.resS.sig",
+    "Label": "textures / textures.9"
+  }
+]

@@ -1,0 +1,10 @@
+{
+  "FormatVersion": 1,
+  "MinimumInstallerVersion": 1,
+  "AppVersion": "1.0.0",
+  "ExecutableName": "ERSwapper.exe",
+  "RequiredFiles": [
+    "presets.json",
+    "bundles.json"
+  ]
+}

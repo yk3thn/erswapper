@@ -1,0 +1,23 @@
+{
+  "c:\\program files (x86)\\steam\\steamapps\\common\\rust\\bundles\\shared\\textures.1.bundle|c:\\users\\yk3th\\appdata\\local\\erswapper\\signatures\\cab-154587b10caab4209fca197fec8809e6.ress.sig": {
+    "BundlePath": "c:\\program files (x86)\\steam\\steamapps\\common\\Rust\\Bundles\\shared\\textures.1.bundle",
+    "SignaturePath": "C:\\Users\\yk3th\\AppData\\Local\\ERSwapper\\Signatures\\CAB-154587b10caab4209fca197fec8809e6.resS.sig",
+    "BundleLength": 7027660544,
+    "BundleLastWriteUtcTicks": 639220692204531286,
+    "EntryStart": 2188064
+  },
+  "textures.1.bundle|7027660544|cab-154587b10caab4209fca197fec8809e6.ress.sig": {
+    "BundlePath": "c:\\program files (x86)\\steam\\steamapps\\common\\Rust\\Bundles\\shared\\textures.1.bundle",
+    "SignaturePath": "C:\\Users\\yk3th\\AppData\\Local\\ERSwapper\\Signatures\\CAB-154587b10caab4209fca197fec8809e6.resS.sig",
+    "BundleLength": 7027660544,
+    "BundleLastWriteUtcTicks": 639220692204531286,
+    "EntryStart": 2188064
+  },
+  "textures.2.bundle|5410498656|cab-9e62d1b8ecd60ab6d50aac814268e019.ress.sig": {
+    "BundlePath": "c:\\program files (x86)\\steam\\steamapps\\common\\Rust\\Bundles\\shared\\textures.2.bundle",
+    "SignaturePath": "C:\\Users\\yk3th\\AppData\\Local\\ERSwapper\\Signatures\\CAB-9e62d1b8ecd60ab6d50aac814268e019.resS.sig",
+    "BundleLength": 5410498656,
+    "BundleLastWriteUtcTicks": 639217290268252038,
+    "EntryStart": 1974592
+  }
+}
