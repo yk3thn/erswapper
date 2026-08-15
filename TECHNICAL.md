@@ -86,7 +86,51 @@ immediately before the write, in case the game was launched while the confirmati
 
 ## Adding items
 
-use uabea to find the dump and edit the presets.json to include that new item and it will reflect
+The gallery is just `Config/presets.json`. Add an entry and the item appears on the next launch —
+no rebuild, no tooling.
+
+Every field comes straight out of a UABEA dump, so the work is reading the dump and copying numbers
+across:
+
+1. Open the bundle in [UABEA](https://github.com/nesrak1/UABEA), find the texture, **Export Dump**.
+2. Open the dump and read `m_Name`, `m_Width`, `m_Height`, `m_MipCount`, `m_TextureFormat`, and the
+   `m_StreamData` block's `offset` and `size`.
+3. Add an object to `Config/presets.json`:
+
+```json
+{
+  "DisplayName": "AK47",
+  "Category": "Weapons",
+  "TextureObjectName": "ak47_combined_bc",
+  "BundleRelativePath": "shared\\textures.1.bundle",
+  "ResSSignatureSourcePath": "CAB-154587b10caab4209fca197fec8809e6.resS.sig",
+  "StreamDataOffset": 3677402608,
+  "StreamDataSize": 2796216,
+  "Width": 2048,
+  "Height": 2048,
+  "MipCount": 12,
+  "DxgiFormat": "BC1_UNORM"
+}
+```
+
+| Field | Where it comes from |
+|---|---|
+| `DisplayName` | Anything you like — this is the gallery label |
+| `Category` | `Weapons`, `Tools`, `Medical`, `Clothing`, `Deployables`, `Resources`, `Other` |
+| `TextureObjectName` | `m_Name` from the dump |
+| `BundleRelativePath` | The bundle's path under `Bundles\`, with **escaped** backslashes |
+| `ResSSignatureSourcePath` | The `.sig` in `Config/Signatures/` for that bundle — see `Config/bundles.json` for the mapping |
+| `StreamDataOffset` | `m_StreamData.offset`, relative to the `.resS`, **not** the bundle |
+| `StreamDataSize` | `m_StreamData.size` |
+| `Width` / `Height` / `MipCount` | `m_Width`, `m_Height`, `m_MipCount` |
+| `DxgiFormat` | `BC1_UNORM` for `m_TextureFormat` 10, `BC3_UNORM` for 12 |
+
+Only `BC1_UNORM`, `BC2_UNORM` and `BC3_UNORM` can be written. Any other `m_TextureFormat` is listed
+under **What cannot be swapped?** and cannot be added by any means.
+
+Getting a number wrong does not corrupt anything. `StreamDataSize` has to match what the encoder
+produces from those dimensions, or the write is refused before a single byte is touched — the same
+check that makes every other swap safe.
 
 ---
 
@@ -164,11 +208,58 @@ ERSwapper.sln
 │   └── Config/                     presets.json, Signatures, Thumbnails, offset_cache.json
 ```
 
-The app keeps its own data under `%LocalAppData%\ERSwapper`
-
 ### Where files live at runtime
 
-fix this
+Files are split by one rule: **if the download can produce it, it lives next to the exe. If only
+your machine can produce it, it lives in AppData.**
+
+**Next to `ERSwapper.exe` — replaceable**
+
+```
+ERSwapper.exe
+texconv.exe                  downloads itself if missing
+Config/
+├── presets.json             the item catalogue — edit this to add items
+├── bundles.json             which .sig belongs to which bundle
+├── unsupported.json         textures that cannot be written
+├── release.json             version + what the installer needs to handle it
+├── offset_cache.json        starting offsets, saves the first scan
+├── Signatures/              4 KB fingerprints, one per bundle
+└── Thumbnails/              pre-built gallery previews
+```
+
+`Config` is disposable. An update **mirrors** this folder rather than merging it, so a file removed
+in a new version actually disappears instead of lingering. Nothing here is written at runtime, which
+is what makes replacing it wholesale safe.
+
+That is also why `presets.json` lives here rather than in AppData: it ships with the download, so
+updates deliver new items to everyone, and anyone can open it and add their own.
+
+**In `%LocalAppData%\ERSwapper\` — yours, never touched by updates**
+
+```
+settings.json                Rust folder, Config folder, preferences
+layout.json                  which folder layout this data was written under
+offset_cache.json            offsets learned on this machine
+unsupported.json             textures this machine found it cannot write
+History/                     swap log, original bytes for undo, before/after previews
+Thumbnails/                  previews built here rather than shipped
+Backups/                     whole-bundle copies, only if you turn them on
+```
+
+None of these folders exist until something is actually written, so a fresh install leaves just
+`settings.json` and `layout.json`.
+
+Where both sides have the same filename — `offset_cache.json`, `unsupported.json` — the shipped copy
+is a read-only starting point and the AppData copy is what this machine learned. They are merged on
+read; the shipped one never overwrites yours.
+
+Deleting the whole AppData folder is safe **unless swaps are currently applied** — the original bytes
+that undo them live in `History/`. With nothing applied you lose only your settings, which are
+re-detected on the next launch.
+
+The folder is named after the executable, so two builds side by side never read each other's
+settings or history.
 
 ---
 

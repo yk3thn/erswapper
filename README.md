@@ -20,7 +20,7 @@ For manual swaps, you are going to need:
 2. [png2raw.py](https://github.com/yk3thn/erswapper/raw/refs/heads/main/Tools/png2raw.py)
 3. [png2raw.bat](https://github.com/yk3thn/erswapper/raw/refs/heads/main/Tools/png2raw.bat)
 4. [HxD](https://mh-nexus.de/downloads/HxDSetup.zip)
-5. The tutorial at the bottom of this README
+5. [The tutorial at the bottom of this README](https://github.com/yk3thn/erswapper/tree/main#how-to-perform-a-manual-swap)
 
 ## Safety
 
