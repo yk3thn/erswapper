@@ -30,3 +30,6 @@ I am only 1 person so I can only launch Rust over and over again so many times, 
 12. I've swapped at least 25 textures over the last 2 days and havent been banned or suspended (Subject to change)
 13. Rust detects UABEA open
 14. Rust does not detect ERSwapper open
+15. This program is built such that if Rust changes the format of the assets, it can be rebuilt to support the new system
+16. EAC does not check the hash or file size of the bundle files reliably. Sometimes it does, sometimes it doesn't
+17. I can't test all the assets available so if you find one that doesnt work please let me know
