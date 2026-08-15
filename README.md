@@ -19,25 +19,7 @@ For manual swaps, you are going to need:
 2. [png2raw.py](https://github.com/yk3thn/erswapper/raw/refs/heads/main/Tools/png2raw.py)
 3. [png2raw.bat]()
 4. [HxD](https://mh-nexus.de/downloads/HxDSetup.zip)
-
-#### How To Perform a Manual Swap:
-
-1. Put all 3 files in the same folder as your edited texture
-2. get [UABEA](https://github.com/nesrak1/UABEA)
-4. drag and drop a bundle into UABE and then click on the drop down and select the resS
-5. click "Export" and then click the drop down and reselect the regular CAB then click "Info"
-6. click on the asset you want to edit and then click "Export Dump" and Plugins/Export Texture
-7. Close UABEA and edit the png you exported
-8. Replace the expect number inside png2raw.bat with the size of the asset located in the dump you exported
-9. rename the png file to "texture.png" and then open up png2raw.py
-10. if it says "Matches target texture. Safe to overwrite in palce." then you can proceed
-11. take the size of the bundle (ex. 7027660544) and subtract the size of the resS (ex. 7025472480) to get the resS offset (ex. 2188064)
-12. add the resS offset to the asset offset found in the dump (ex. 4341665408) to get your asset offset (ex. 4343853472)
-13. do CTRL+E to search for the asset offset using the "dec" selection and then for the "Length" put the size of the asset found in the dump
-14. everything selected is the byte data of the asset
-15. use CTRL+C to copy the data from the texture.bin that was created from texture.png
-16. use CTRL+B (NOT CTRL+V) to overwrite the selected data in the bundle
-17. save the bundle with CTRL+S and then launch Rust
+5. The tutorial at the bottom of this README
 
 ## Safety
 
@@ -112,9 +94,28 @@ extend by hand.
 
 view **[TECHNICAL.md](TECHNICAL.md)** for more information.
 
+#### How To Perform a Manual Swap:
+
+1. Put all 3 files in the same folder as your edited texture
+2. get [UABEA](https://github.com/nesrak1/UABEA)
+4. drag and drop a bundle into UABE and then click on the drop down and select the resS
+5. click "Export" and then click the drop down and reselect the regular CAB then click "Info"
+6. click on the asset you want to edit and then click "Export Dump" and Plugins/Export Texture
+7. Close UABEA and edit the png you exported
+8. Replace the expect number inside png2raw.bat with the size of the asset located in the dump you exported
+9. rename the png file to "texture.png" and then open up png2raw.py
+10. if it says "Matches target texture. Safe to overwrite in palce." then you can proceed
+11. take the size of the bundle (ex. 7027660544) and subtract the size of the resS (ex. 7025472480) to get the resS offset (ex. 2188064)
+12. add the resS offset to the asset offset found in the dump (ex. 4341665408) to get your asset offset (ex. 4343853472)
+13. do CTRL+E to search for the asset offset using the "dec" selection and then for the "Length" put the size of the asset found in the dump
+14. everything selected is the byte data of the asset
+15. use CTRL+C to copy the data from the texture.bin that was created from texture.png
+16. use CTRL+B (NOT CTRL+V) to overwrite the selected data in the bundle
+17. save the bundle with CTRL+S and then launch Rust
+
 ## License
 
-[MIT](LICENSE). Use it, fork it, ship your own build — just keep the copyright notice.
+[MIT](LICENSE).
 
 `texconv.exe` is bundled from [Microsoft's DirectXTex](https://github.com/microsoft/DirectXTex), also
 MIT licensed.
