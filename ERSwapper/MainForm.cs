@@ -699,11 +699,13 @@ public partial class MainForm : Form
 
         if (confirm != DialogResult.Yes) return;
 
-        ThumbnailCache.Clear();
+        int deleted = ThumbnailCache.Clear();
         _thumbnails.Images.Clear();
 
         foreach (ListViewItem item in lstItems.Items) item.ImageKey = "";
         lstItems.Invalidate();
+
+        SetStatus($"Deleted {deleted} cached preview(s). Rebuilding…");
 
         var generator = new ThumbnailGenerator(_settings, _locator);
 

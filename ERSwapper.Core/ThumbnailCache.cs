@@ -135,15 +135,29 @@ public static class ThumbnailCache
         return deleted;
     }
 
-    public static void Clear()
+    public static int Clear()
     {
+        return DeletePngsIn(Directory) + DeletePngsIn(ShippedDirectory);
+    }
+
+    private static int DeletePngsIn(string directory)
+    {
+        int deleted = 0;
+
         try
         {
-            foreach (string file in System.IO.Directory.EnumerateFiles(Directory, "*.png"))
+            foreach (string file in System.IO.Directory.EnumerateFiles(directory, "*.png"))
             {
-                try { File.Delete(file); } catch { }
+                try
+                {
+                    File.Delete(file);
+                    deleted++;
+                }
+                catch { }
             }
         }
         catch { }
+
+        return deleted;
     }
 }
