@@ -6,6 +6,7 @@ Open source, ERSwapper uses the Unity Asset Bundle System to locate, preview, ed
 ![ERSwapper](https://github.com/yk3thn/erswapper/blob/main/ERSwapper_banner.png "ERSwapper Banner")
 
 View the Youtube tutorial below:
+
 [![ERSwapper YouTube Video](https://img.youtube.com/vi/rpI-dewq4es/0.jpg)](https://www.youtube.com/watch?v=rpI-dewq4es)
 
 ## Prerequisites
